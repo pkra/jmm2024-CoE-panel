@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Krautzberger. Opening remarks. JMM 2024. CoE Panel. Mathematics online: PDFs and issues regarding
+        accessibility</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            max-width: 100%;
+            min-height: 100dvh;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        img,
+        video,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+
+        /* end "reset" */
+        a,
+        a:visited {
+            color: #3498db;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #2980b9;
+            text-decoration-skip-ink: auto;
+        }
+
+        html {
+            font-size: calc(1rem + 1vw);
+        }
+
+        p {
+            font-size: 1em;
+            margin-bottom: 1.3em;
+            font-weight: 450;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-bottom: 0.5em;
+            font-weight: 500;
+            line-height: 1.42;
+        }
+
+        h1 {
+            font-size: calc(1rem + 1vw);
+        }
+
+        h2 {
+            font-size: calc(1.45rem + 1.29vw);
+        }
+
+        @font-face {
+            font-display: swap;
+            font-family: 'Dosis';
+            src: url('./Dosis-VariableFont_wght.woff2') format('woff2');
+            font-weight: 1 999;
+        }
+
+
+        body {
+            color: #444;
+            font-family: "Dosis", Helvetica, sans-serif;
+            font-weight: 300;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 1em;
+            border-bottom: 2px solid lightgray;
+            padding-bottom: 0.5em;
+            text-align: right;
+        }
+
+        blockquote {
+            border-left: 8px solid lightblue;
+            padding-left: 1em;
+        }
+
+
+        .slider {
+            -ms-scroll-snap-type: x mandatory;
+            scroll-snap-type: x mandatory;
+            display: -webkit-box;
+            display: flex;
+            overflow-x: scroll;
+        }
+
+        .slider>section {
+            min-width: 100vw;
+            min-height: 100vh;
+            padding-inline: 10vw;
+            scroll-snap-align: start;
+            position: relative;
+            height: 100%;
+            border: 2px solid #3498db;
+        }
+
+        video {
+            width: auto;
+            max-height: 33vh
+        }
+
+        video:focus {
+            max-height: 60vh;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <section class="slider">
+        <section tabindex="0" aria-label="Slide 1">
+            <h1 class="header-anchor">Mathematics online: <br>PDFs and issues regarding accessibility</h1>
+            <p>Opening remarks - Peter Krautzberger (<a href="https://krautzource.com">krautzource</a>)</p>
+            <p>AMS CoE Panel, JMM 2024</em></p>
+            <p style="margin-top: 10%; font-size: 0.8em">Scroll right/left or <kbd>TAB</kbd> to move through slides.</p>
+        </section>
+        <section>
+            <h2>What I'm interested in</h2>
+            <ul>
+                <li>Helping and supporting people wanting to create accessible web content</li>
+                <li>Educating on the benefits of accessible content creation</li>
+                <li>Exploring content patterns <em>along <a
+                            href="https://frankchimero.com/blog/2015/the-webs-grain/">the web's grain</a></em></li>
+                <li>Improving web standards and implementations to improve the web as a whole</li>
+            </ul>
+        </section>
+        <section tabindex="0" aria-label="Slide 2">
+            <h2>What I do</h2>
+            <ul>
+                <li><a href="https://krautzource.com/">Independent developer and consultant</a>
+                    primarily for STEM content conversion <br>
+                    e.g., <a href="https://www.ams.org/publications/journals/journalsframework/AMSMathViewer">AMS
+                        MathViewer</a></li>
+                <li><a href="https://www.w3.org/participate/invited-experts/">Invited Expert at W3C</a>,
+                    co-editor of <a href="https://w3c.github.io/aria/">the ARIA Specification</a></li>
+                <li>Tinkering with writing <a href="https://www.peterkrautzberger.org/0219/">for the web</a> and <a
+                        href="https://www.peterkrautzberger.org/0220/">with the web</a></li>
+            </ul>
+        </section>
+        <section tabindex="0" aria-label="Slide 3">
+            <h2>Working axioms</h2>
+            <ul>
+                <li>The web is the future (of mathematical writing).</li>
+                <li>Creating accessible web content is easier than you think.</li>
+                <li>Creating accessible web content is harder than you think.</li>
+                <li><q>users over authors over theoretical purity</q> (stolen from <a
+                        href="https://www.w3.org/TR/html-design-principles/#priority-of-constituencies">HTML Design
+                        Principles</a>)</li>
+            </ul>
+        </section>
+        <section tabindex="0" aria-label="Slide 4">
+            <h2>Demos etc.</h2>
+            <ul>
+                <li><a href="https://krautzource.github.io/aria-tree-walker/">An ARIA tree pattern for complex
+                        content</a></li>
+                <li><a href="https://pkra.github.io/2022-athen-stem-conf/#nvda">Video recordings of AMS MathViewer with
+                        various screenreaders</a></li>
+                <li><a href="https://www.peterkrautzberger.org/0219/">An experimental pattern for/of "granularity
+                        walkers"</a></li>
+                <li><a href="https://www.youtube.com/watch?v=3X10I8v11WA">Video recording using the AMS's texml &
+                        texml-to-html to convert some "random" LaTeX to HTML</a> (and <a
+                        href="https://github.com/scoskey/m515/pull/5/">the result</a>)</li>
+            </ul>
+        </section>
+    </section>
+    <script>
+        // quick hack to get keyboard scrolling
+        // if (document.activeElement === document.body) document.querySelector('[tabindex="0"]')?.focus()
+    </script>
+</body>
+
+</html>
