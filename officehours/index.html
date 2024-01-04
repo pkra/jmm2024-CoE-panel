@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peter Krautzberger. Accessible Notes and Course Assets "office hour"</title>
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        * {
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            max-width: 100%;
+            min-height: 100dvh;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        body {
+            max-width: 70ch;
+            margin-inline: auto;
+            color: #444;
+            font-family: Helvetica, sans-serif;
+        }
+
+
+        img,
+        video,
+        svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            overflow-wrap: break-word;
+        }
+
+        /* end "reset" */
+        a,
+        a:visited {
+            color: #3498db;
+        }
+
+        a:hover,
+        a:focus,
+        a:active {
+            color: #2980b9;
+            text-decoration-skip-ink: auto;
+        }
+
+        html {
+            font-size: 1.33rem;
+        }
+
+
+        p {
+            font-size: 1em;
+            line-height: 1.33;
+            margin-bottom: 1.3em;
+            font-weight: 450;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin-bottom: 0.5em;
+            font-weight: normal;
+            line-height: 1.2;
+        }
+
+        h1,
+        h2,
+        h3 {
+            margin-top: 1em;
+            border-bottom: 2px solid lightgray;
+            padding-bottom: 0.5em;
+            text-align: right;
+        }
+
+        h1 {
+            font-size: calc(1.66rem);
+            text-align: center;
+        }
+
+        h2 {
+            font-size: calc(1.45rem);
+        }
+
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1 class="header-anchor"><q>Office hour</q> Accessible Notes and Course Assets</h1>
+        <p>Peter Krautzberger (<a href="https://krautzource.com">krautzource</a>)</p>
+        <p>JMM 2024 @ AMS</em></p>
+    </section>
+    <section>
+        <h2>Tools for LaTeX to HTML conversion</h2>
+        <p>A few projects in this space:</p>            padding-bottom: 10em;
+
+        <ul>
+            <li>
+                <p><a href="https://pandoc.org/">pandoc</a> - Haskell, very versatile on input &amp; output,
+                    extensible, large community
+                    <br> limited math mode handling, barebones output
+                </p>
+            </li>
+            <li>
+                <p><a href="https://tug.org/tex4ht/">tex4ht/make4ht</a> -
+                    Lua, available in texlive, good TeX input facilities, good fallback options
+                    <br>
+                    Output tends to be layout focused, barebones output.
+            </li>
+            <li>
+                <p><a href="https://github.com/plastex/plastex/">plasTeX</a> - Python, focus on balance between
+                    structure and layout separation, good community, default styles
+                    <br>Limited TeX input facilities, default output somewhat unstructured ("div-soup")
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML</a> - Perl, available in texlive, good TeX input
+                    facilities
+                    <br>Output very complex, output tends to be layout focused, math mode output limited
+                </p>
+            </li>
+            <li>
+                <p>
+                    <a href="https://github.com/AmerMathSoc/texml">AMS texml</a> / <a
+                        href="https://github.com/AmerMathSoc/texml-to-html/">texml-to-html</a> - Perl, good TeX
+                    input facilities, mathjax-oriented math mode handling, balanced output structure, good fallback
+                    options
+                    <br>young project, AMS-oriented, output is barebones
+                </p>
+            </li>
+        </ul>
+        </li>
+        </ul>
+        <p>Other interesting tools and projects</p>
+        <ul>
+            <li><a href="https://pretextbook.org/">pretext</a> - specialized XML language &amp; tooling to create
+                multiple outputs. A strong, mathematical community. </li>
+            <li><a href="https://github.com/chirun-ncl/chirun">chirun</a> - tools (partially using plasTeX) with a focus
+                on author
+                convenience</li>
+            <li><a href="https://github.com/vlmantova/bookml">bookml</a> - latexml-based tool to generate
+                bookdown-oriented output</li>
+            <li>and many more</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Making accessible content</h2>
+        <p>Tools can never magically create accessible content.</p>
+        <p><strong>Accessibility is a process focusing on people</strong></p>
+        <ul>
+            <li>The W3C <a href="https://www.w3.org/TR/WCAG21/">Web Content Accessibility Guidelines (WCAG)</a> is the
+                legal
+                basis in most countries. It lists ~60 &quot;Success Criteria&quot; across 3 Levels: A, AA, AAA. <br>
+                WCAG is very technical, specialist-oriented. Somewhat less formal introductions from the W3C are <a
+                    href="https://www.w3.org/WAI/fundamentals/accessibility-intro/"> Introduction to Web
+                    Accessibility</a> and <a
+                    href="https://www.w3.org/WAI/fundamentals/accessibility-principles/">Accessibility
+                    Principles</a>. Many criteria revolve around applications and usually do not matter with long form
+                content.
+            </li>
+            <li>The <a href="https://webaim.org/">WebAIM</a> initiative provides many helpful <a
+                    href="https://webaim.org/articles/">articles</a>
+            </li>
+        </ul>
+        <h2 id="pour-principles">POUR Principles</h2>
+        <p>WCAG&#39;s core principles: All content must be</p>
+        <ul>
+            <li>Perceivable</li>
+            <li>Operable</li>
+            <li>Understandable</li>
+            <li>Robust</li>
+        </ul>
+        <p>for <strong>all</strong> users.</p>
+        <h2>Evaluating accessibility </h2>
+        <p>Automated tests are not exhaustive but catch most frequent issues (~30% of WCAG is automatically testable but
+            those cover ~50% of total errors, cf. <a
+                href="https://www.deque.com/blog/automated-testing-study-identifies-57-percent-of-digital-accessibility-issues/">Deque's
+                research</a>. </em></p>
+        <p>Popular general purpose tools: <a href="https://www.deque.com/products/axe/">axe</a>, <a
+                href="http://wave.webaim.org/extension/">WAVE</a>. <br> Browsers also include tools such as <a
+                href="https://developers.google.com/web/tools/chrome-devtools/">Chrome Developer
+                Tools</a> (color picker, vision deficiency simulation, accessibility tree,
+            accessibility audit)
+        </p>
+
+        <h2>Practical evaluation</h2>
+        <p>Assistive technologies. A complex landscape of tools and devices. A key category is screenreaders:</p>
+        <ul>
+            <li>Windows: <a href="https://www.nvaccess.org/">NVDA</a>, <a
+                    href="https://www.freedomscientific.com/products/software/jaws/">JAWS</a>, <a
+                    href="https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started">Microsoft
+                    Narrator</a></li>
+            <li>Mac/iOS: <a href="https://www.apple.com/accessibility/">VoiceOver</a></li>
+            <li>Android: <a href="https://support.google.com/accessibility/android/answer/6283677?hl=de">Talkback</a>
+            </li>
+            <li>Linux: <a href="https://wiki.gnome.org/Projects/Orca">Gnome ORCA</a>, <a
+                    href="http://www.chromevox.com/">Chromevox</a> (ChromeOS only)</li>
+        </ul>
+        <p>Other assistive technologies include zoom, dictation, and voice assistants software or devices.</p>
+        <p>More: <a href="https://www.youtube.com/watch?v=y0m7VEHoXMI">Deque: Intro to Screen Readers (video)</a>, <a
+                href="https://www.youtube.com/watch?v=92pM6hJG6Wo">Demo: Sina&#39;s speed (video)</a>, <a
+                href="https://www.youtube.com/watch?v=q_ATY9gimOM">SLCC Demo (video)</a></p>
+        <h2>Understanding Screenreader interaction</h2>
+        <p>Screenreaders are the primary tool for blind and low-vision users and commonly used by other users.</p>
+        <ul>
+            <li>Content is linearized for reading and navigation.<ul>
+                    <li>users gather overview from structure not visual layout.</li>
+                </ul>
+            </li>
+            <li>Reading is continuous or chunked (line, word, character)</li>
+            <li>Navigation facilitated by structural elements (landmarks, links, headings)</li>
+            <li>structural information is added to output (<code>&lt;h1&gt;title&lt;h1&gt;</code> voiced &quot;title,
+                heading level 1&quot;)</li>
+            <li>language markup content will influence output</li>
+            <li>screenreaders can pause, handle abbreviations, may skip punctuation and much more (see below)</li>
+            <li><em>Note.</em> some screenreader users read as fast as visual users.</li>
+        </ul>
+        <p>WebAIM resources: <a href="https://webaim.org/techniques/screenreader/">Designing for Screen Reader
+                Compatibility</a>, <a href="https://webaim.org/articles/screenreader_testing/">Testing with Screen
+                Readers</a></p>
+
+                
+        <h2>A very quick and dirty list for mathematical long form content</h2>
+        <ul>
+            <li>Ensure "non-text" (e.g., an image) has a text alternative</li>
+            <li>Check use of color - contrast of text/background, do not use color alone, ensure contrasts in graphics etc.</li>
+            <li>Avoid images of text</li>
+            <li>Provide good document structure (landmarks, headings, enunciations)</li>
+            <li>For equation content, generate TeX for use with MathJax.</li>
+            <li>Avoid whitespace adjustments.</li>
+            <li>Properly link cross-references and provide good link text. Do not use sensory characteristics  (e.g., "on the left", "the blue part")</li>
+        </ul>
+
+        
+        
+    </section>
+</body>
+
+</html>
